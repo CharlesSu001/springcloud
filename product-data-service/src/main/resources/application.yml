@@ -1,0 +1,16 @@
+# server:
+# port: 因为会启动多个product-service 所以端口号由用户自行设置
+
+spring:
+  application:
+    name: product-data-service
+  zipkin:
+    base-url: http://localhsot:9411
+    discoveryClientEnabled: false
+    sender:
+        type: web
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
